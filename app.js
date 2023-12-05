@@ -6,7 +6,6 @@ const morgan = require("morgan")
 const body_parser = require("body-parser")
 const {sp, fcbspielers} = require("./source/db/sequelize")
 const findAllJS = require("./route/findAll")
-sp()
 app.get("/", (req,res)=>{res.send("Hallo")})
 app
   .use(favicon(__dirname = "./fcb.ico"))
