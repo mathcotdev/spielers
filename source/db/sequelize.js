@@ -22,7 +22,7 @@ const basefcb = new Sequelize(
 const benutzers = modelbenutzer(basefcb, DataTypes)
 const fcbspielers = modelspieler(basefcb, DataTypes)
 const sp = ()=>{
-  basefcb.sync({force: true})
+  basefcb.sync()
    .then(()=>{ 
      console.log("FIN SYNC")
      fcb.forEach((spieler)=>{
