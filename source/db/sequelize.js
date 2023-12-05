@@ -1,16 +1,17 @@
 const {Sequelize, DataTypes} = require("sequelize")
 const fcb = require("./fcb")
+const pg = require("pg")
 const modelbenutzer = require("../models/benutzer")
 const modelspieler = require("../models/spieler")
 const benutzer = require("../models/benutzer")
 const bcrypt = require("bcrypt")
 const basefcb = new Sequelize(
-  "fcb",
-  "root",
-  "",
+  "verceldb",
+  "default",
+  "7vaVObwEgt6I",
   {
-    host : "localhost",
-    dialect : "mariadb",
+    host : "ep-holy-leaf-55070040-pooler.us-east-1.postgres.vercel-storage.com",
+    dialect : "mysql",
     dialectObtions: {
       timezone: "Etc/GMT-2"
     },
